@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LiBrain</title>
+    <link rel="icon" type="image/png" href="assets/css/images/logo.png">
+    <body>
+
+        <div class="sti">
+        </div>
+
+        <div class="form1">
+            <form id="loginForm">
+                <h2>Login</h2>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+        </div>
+        </form>
+
+        <div class="form2">
+            <form id="signupForm">
+                <h2>Create New Account</h2>
+                <label for="newUsername">Username:</label><br>
+                <input type="text" id="newUsername" name="newUsername"><br>
+                <label for="newPassword">Password:</label><br>
+                <input type="password" id="newPassword" name="newPassword"><br>
+                <label for="confirmPassword">Confirm Password:</label><br>
+                <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+        </div>
+        </form>
+        <div class="adm">
+            <button onclick="admin()">Admin</button>
+        </div>
+        <div class="stud">
+            <button onclick="stud()"> Student</button>
+        </div>
+        <div class="sign">
+            <button onclick="signup()">Sign Up </a>
+        </div>
+    </body>
+</head>
+<script>
+    function admin(){
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username == "admin" && password == "admin") {
+            window.location = 'index.html';
+        }
+        else {
+            alert("Invalid username or password");
+        }
+    }
+    function stud() {
+        window.location = 'index.html';
+    }
+    function signup() {
+        var newUsername = document.getElementById("username").value;
+        var newPassword = document.getElementById("password").value;
+        var confirmPassword = document.getelementById("confirmPassword").value;
+        if (confirmPassword == "admin" && newPassword == "admin") {
+            window.location = 'index.html';
+        }
+        else {
+            alert("Invalid username or password");
+        }
+        
+    }
+</script>
+ <style>
+
+     body {
+         background-image: url(omnibus.jpg);
+         height: 100vh;
+         background-size: cover;
+         background-position: center;
+         text-align: center;
+         font-family: arial;
+         overflow:;
+         color: white;
+         background-repeat: no-repeat;
+         overflow: hidden;
+
+     }
+ 
+.sti{
+background-image:url(logo.png);
+background-position:right;
+background-size: contain;
+background-repeat: no-repeat;
+height:15%;
+weight:15%;
+margin:auto 20px;
+
+}
+     .stud {
+         margin-top:0px;
+         margin-left:-450px;
+     }
+     .adm {
+         margin-top: 315px;
+         margin-left: -450px;
+     }
+     .sign {
+     margin-left:415px;
+     margin-top:-22px;
+     }
+     
+ .form1{
+	font-family:arial;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+	height:300px;
+    margin: 50px 265px;
+    padding: 30px 30px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+	background:rgba(0,0,0,0.6);
+	color: white;
+  }
+     
+  .form2 {
+	font-family:arial;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: -423px 700px;
+    padding: 30px 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+	background:rgba(0,0,0,0.6);
+	color: white;
+	
+  }
+  .form1 h2{
+	float:center;
+	font-size:40px;
+	border-bottom:6px solid yellow;
+	margin-bottom:25px;
+	padding:0px 15px;
+	
+  }
+  .form2 h2{
+	float:center;
+	font-size:35px;
+	border-bottom:6px solid yellow;
+	margin-bottom:20px;
+	padding:0px 15px;
+  }
+  label {
+    margin-top: 10px;
+  }
+  input[type="text"], input[type="password"] {
+    height: 30px;
+    margin-top: 5px;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    padding: 0 10px;
+	background:rgba(0,0,0,0);
+	color:white;
+  }
+     button {
+         margin-top: 10px;
+         padding: 8px 50px;
+         border: none;
+         border-radius: 5px;
+         background: white;
+         color: black;
+         font-weight: bold;
+     }
+  </style>
+</html>
